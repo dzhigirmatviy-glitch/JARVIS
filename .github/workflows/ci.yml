@@ -23,6 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install pyttsx3 speechrecognition ollama
 
-    - name: Check Python syntax
+    - name: Run import test
+      run: |
+        python test_jarvis.py
+
+    - name: Check syntax of main file
       run: |
         python -m py_compile jarvis_stable_fixed.py
